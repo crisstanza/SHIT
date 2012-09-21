@@ -1,18 +1,20 @@
 #
-# SHIT main configurations file
+# SHIT configuration file
 #
 
 #
-# #GitHub user (https://github.com/SHIT_USER)
+# GitHub user (https://github.com/SHIT_USER)
 #
 SHIT_USER=crisstanza
 
 #
-# #GitHub repository (https://github.com/SHIT_USER/SHIT_REPOSITORY)
+# GitHub repository (https://github.com/SHIT_USER/SHIT_REPOSITORY)
 #
 SHIT_REPOSITORY=SHIT
 
-
-SHIT_USE_BRANCH_MASTER=1
-SHIT_USE_BRANCH_GH_PAGES=1
-SHIT_USE_BRANCH_ZERO=1
+#
+# Specify which branches you want to use. Format: branch-name=1|0
+#
+SHIT_USE_BRANCH[${#SHIT_USE_BRANCH[@]}]="master=1"
+SHIT_USE_BRANCH[${#SHIT_USE_BRANCH[@]}]="gh-pages=1"
+SHIT_USE_BRANCH[${#SHIT_USE_BRANCH[@]}]="zero=1"

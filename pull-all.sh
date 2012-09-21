@@ -1,26 +1,24 @@
 #!/bin/sh
 
+. shit-config.sh
 clear
 
 echo ""
 pwd
 
-echo ""
-cd master
-pwd
-git pull
-cd ..
+for branch in ${SHIT_USE_BRANCH[@]} ; do
 
-echo ""
-cd gh-pages
-pwd
-git pull
-cd ..
+	branch_name=${branch%%=*}
+	branch_use=${branch##*=}
 
-echo ""
-cd zero
-pwd
-git pull
-cd ..
+	if [ "$branch_use" -eq "1" ]; then
+		echo ""
+		cd $branch_name
+		pwd
+		git pull
+		cd ..
+	fi
+
+done
 
 echo ""
