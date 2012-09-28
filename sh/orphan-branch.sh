@@ -10,7 +10,7 @@ echo ""
 if [ "$1" == "" ] ; then
 	echo "error: parameter BRANCH'S NAME missing"
 else
-	git clone git@github.com:$SHIT_USER/$SHIT_REPOSITORY.git
+	git clone -n git@github.com:$SHIT_USER/$SHIT_REPOSITORY.git
 	cd $SHIT_REPOSITORY
 	git checkout --orphan $1
 	git rm -rf .
