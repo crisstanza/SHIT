@@ -1,5 +1,6 @@
 #!/bin/sh
 
+cd ..
 . shit-config.sh
 clear
 
