@@ -17,7 +17,7 @@ else
 	echo .DS_Store > .gitignore
 	git add .
 	git commit -m "Initial commit"
-	echo git push origin $1
+	git push origin $1
 	cd ..
 	rm -Rf $SHIT_REPOSITORY
 fi
