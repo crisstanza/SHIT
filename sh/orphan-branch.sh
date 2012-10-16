@@ -19,7 +19,7 @@ else
 	git commit -m "Initial commit"
 	git push origin $1
 	cd ..
-	rm -Rf $SHIT_REPOSITORY
+	rm -rf $SHIT_REPOSITORY
 fi
 
 echo ""
