@@ -7,11 +7,17 @@ clear
 
 echo ""
 
-
-cd gh-pages
-cd demo
-git rm -rf .
-rm -rf *
-cp -r ../../master/* .
+if [ -d gh-pages ] ; then
+	cd gh-pages
+	if [ ! -d demo ] ; then
+		mkdir demo
+	fi
+	cd demo
+	git rm -rf .
+	rm -rf *
+	cp -r ../../master/* .
+else 
+	echo "[ERROR] branch 'gh-pages' was not found!"
+fi
 
 echo ""
