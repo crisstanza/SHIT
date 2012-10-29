@@ -2,7 +2,7 @@
 
 cd ..
 . shit-config.sh
-. shit-config-post.sh
+. sh/shit-config-post.sh
 clear
 
 echo ""
