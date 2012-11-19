@@ -11,11 +11,13 @@ if [ -d gh-pages ] ; then
 	cd gh-pages
 	if [ ! -d demo ] ; then
 		mkdir demo
+	else
+		cd demo
+		git rm -rf .
+		rm -rf *
+		cd ..
 	fi
-	cd demo
-	git rm -rf .
-	rm -rf *
-	cp -r ../../master/* .
+	cp -r ../master/* demo/
 else 
 	echo "[ERROR] branch 'gh-pages' was not found!"
 fi
