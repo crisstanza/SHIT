@@ -18,6 +18,13 @@ for branch in ${SHIT_USE_BRANCH[@]} ; do
 		cd $branch_name
 		pwd
 		git pull
+		if [ "$branch_name" == "heroku" ] ; then
+			echo ""
+			cd $SHIT_REPOSITORY
+			pwd
+			git pull
+			cd ..
+		fi
 		cd ..
 	fi
 

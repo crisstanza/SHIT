@@ -15,6 +15,12 @@ for branch in ${SHIT_USE_BRANCH[@]} ; do
 	if [ "$branch_use" -eq "1" ] ; then
 		git clone git@github.com:$SHIT_USER/$SHIT_REPOSITORY.git -b $branch_name $branch_name
 		echo ""
+		if [ "$branch_name" == "heroku" ] ; then
+			cd $branch_name
+			git clone git@heroku.com:$SHIT_REPOSITORY.git -o heroku
+			echo ""
+			cd ..
+		fi
 	fi
 
 done

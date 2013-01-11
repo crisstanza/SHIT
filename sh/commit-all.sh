@@ -18,6 +18,13 @@ for branch in ${SHIT_USE_BRANCH[@]} ; do
 		cd $branch_name
 		pwd
 		git commit -m "$1"
+		if [ "$branch_name" == "heroku" ] ; then
+			echo ""
+			cd $SHIT_REPOSITORY
+			pwd
+			git commit -m "$1"
+			cd ..
+		fi
 		cd ..
 	fi
 
